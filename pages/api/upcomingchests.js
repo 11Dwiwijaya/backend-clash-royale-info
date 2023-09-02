@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     try {
         const playerTag = req.query.tag;
 
-        const response = await axios.get(`https://proxy.royaleapi.dev/v1/players/${playerTag}/upcomingchests`, {
+        const response = await axios.get(`https://proxy.royaleapi.dev/v1/players/%23${playerTag}/upcomingchests`, {
             headers: {
                 'Authorization': `Bearer ${API_KEY}`
             }
